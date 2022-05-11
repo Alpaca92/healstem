@@ -7,7 +7,7 @@ parcel = pd.read_excel('로젠택배_매트출고_바코드입력.xlsx', '택배
 
 # 전역변수
 TODAY = str(date.today())
-products = {
+result = {
 '의자': 0,
 '싱글': 0,
 '슈퍼': 0,
@@ -37,7 +37,7 @@ products = {
 '코스메틱카달로그': 0
 }
 
-arr = []
+products = []
 
 target = parcel.loc[parcel['날짜'] == '2022-05-10', ['물품명']]
 
@@ -45,9 +45,10 @@ for i in target.index:
   product_name = target['물품명'][i]
   split_list = product_name.split(',')
   
-  arr += split_list
+  products += split_list
   
-print(arr)
+for product in products:
+  print(product)
 
 
 # reg = 미\d+|메\d+(\+\d)?
