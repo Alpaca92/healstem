@@ -49,9 +49,15 @@ ex. -석미화 싱3,싱카3,의2,의카2,슈3(개인물건 슈카3)
 |코스메틱접지|접지|
 |코스메틱카달로그|카달로그|
 
+## \*references
 
+- [pandas](https://pandas.pydata.org/)
 
+- [Assertions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Assertions)
 
+- [How to write to an existing excel file without overwriting data (using pandas)?](https://stackoverflow.com/questions/20219254/how-to-write-to-an-existing-excel-file-without-overwriting-data-using-pandas)
+
+- 
 
 
 

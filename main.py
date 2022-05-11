@@ -58,3 +58,10 @@ for product in products:
 # 확인해서 물품이 있으면 if-elif 문으로
 # if-elif 문에서 확인된 물품을 dict에서 counting
 # counting된 dict을 바탕으로 재고관리현황에 작성
+
+
+# issue
+# 의카, 싱카, 슈카 & 카밍젤 -> 끝이 '카'로 끝남
+
+# 의자, 실글, 슈퍼 & 110v 류 -> 끝이 같은 글자로 끝남
+# ==> 의1 : \B의\d+ & 110v의3 : 110v의\d+
