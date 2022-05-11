@@ -34,8 +34,10 @@ products = {
 '클렌징': 0,
 '선크림': 0,
 '코스메틱접지': 0,
-'코스메틱카달로그': 0,
+'코스메틱카달로그': 0
 }
+
+arr = []
 
 target = parcel.loc[parcel['날짜'] == '2022-05-10', ['물품명']]
 
@@ -43,6 +45,15 @@ for i in target.index:
   product_name = target['물품명'][i]
   split_list = product_name.split(',')
   
-  products += split_list
+  arr += split_list
   
-print(products)
+print(arr)
+
+
+# reg = 미\d+|메\d+(\+\d)?
+# -석미화 미2(3/29주문) -고윤정 메18+2 메1
+
+# split_list에서 어떤 물품이 있는지를 확인
+# 확인해서 물품이 있으면 if-elif 문으로
+# if-elif 문에서 확인된 물품을 dict에서 counting
+# counting된 dict을 바탕으로 재고관리현황에 작성
