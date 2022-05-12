@@ -2,12 +2,12 @@
 
 [download link](https://github.com/Alpaca92/healstem/archive/refs/heads/master.zip)
 
-## 바코드 입력 엑셀 물품명
+## 바코드 입력 엑셀 물품명 셀 작성
 
-1. 물품명의 구분은 반드시 `,`으로 한다
+1. 각 물품의 구분은 반드시 `,`으로 한다
 
 ```
-ex. -석미화 싱3,싱카3,의2,의카2,슈3,XXX님 개인물품,@YYY 미15(Z/Z 주문)
+ex. -홍길동 싱3,싱카3,의2,의카2,슈3,김철수님 개인물품,@김영희 미15(12/31 주문)
 ```
 
 2. 행사 등으로 인한 수량은 괄호안에 세부내용을 작성한다
@@ -59,11 +59,19 @@ ex. -석미화 싱3,싱카3,의2,의카2,슈3,XXX님 개인물품,@YYY 미15(Z/Z
 
 - [정규표현식 python re r' (raw string)](https://newpower.tistory.com/116)
 
+- [Regular Expressions: Search in list](https://stackoverflow.com/questions/3640359/regular-expressions-search-in-list)
 
+- [search()](https://www.w3schools.com/python/gloss_python_regex_match.asp)
 
+- [filter()](https://www.w3schools.com/python/ref_func_filter.asp)
 
+- [[JavaScript] 정규표현식 - 문자열에 한글 있는지 검사하기](https://eblee-repo.tistory.com/40)
 
+- [Python 정규 표현식으로 추출하기 4가지 사용 방법](https://ponyozzang.tistory.com/279)
 
+- [Python - 문자를 숫자로 변환 (String to Integer, Float)](https://codechacha.com/ko/python-convert-string-to-integer/)
+
+- [[파이썬] 파이썬 Dictionary, get(), keys(), values(), items() 사용법, 파이썬 mapping type - 공부하는 도비](https://yang-wistory1009.tistory.com/38)
 
 
 
