@@ -7,7 +7,7 @@
 1. 물품명의 구분은 반드시 `,`으로 한다
 
 ```
-ex. -석미화 싱3,싱카3,의2,의카2,슈3(개인물건 슈카3)
+ex. -석미화 싱3,싱카3,의2,의카2,슈3,XXX님 개인물품,@YYY 미15(Z/Z 주문)
 ```
 
 2. 행사 등으로 인한 수량은 괄호안에 세부내용을 작성한다
@@ -57,7 +57,7 @@ ex. -석미화 싱3,싱카3,의2,의카2,슈3(개인물건 슈카3)
 
 - [How to write to an existing excel file without overwriting data (using pandas)?](https://stackoverflow.com/questions/20219254/how-to-write-to-an-existing-excel-file-without-overwriting-data-using-pandas)
 
-- 
+- [정규표현식 python re r' (raw string)](https://newpower.tistory.com/116)
 
 
 
