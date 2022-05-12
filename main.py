@@ -4,12 +4,12 @@ from re import search
 from unicodedata import name
 
 import pandas as pd
+from openpyxl import load_workbook
 
 # 택배
 df = pd.read_excel('로젠택배_매트출고_바코드입력.xlsx', '택배', header=8)
 
 # 전역변수
-TODAY = str(date.today())
 result = {
   '의': {
     'regex': '\B의\d+',
@@ -148,9 +148,9 @@ result = {
   }
 }
 
-def get_products():
+def get_products(today):
   products = []
-  target = df.loc[df['날짜'] == '2022-05-09', ['물품명']]
+  target = df.loc[df['날짜'] == today, ['물품명']]
   
   for i in target.index:
     product_name = target['물품명'][i]
@@ -169,19 +169,37 @@ def update_amount(key, product):
     amount = int(search(r'\d+', word).group())
     
     result[key]['amount'] += amount
-    
+
+def create_inventory_df(keys, today):
+  dates = []
+  names = []
+  amounts = []
+  
+  for key in keys:
+    if result[key]['amount'] > 0:
+      dates += [today + ' 택배']
+      names += [result[key]['name']]
+      amounts += [result[key]['amount']]
+      
+  delivered_today = pd.DataFrame(
+    {
+      '날짜': dates,
+      '제품명': names,
+      '출고': amounts
+    }
+  )
+  
+  print(delivered_today)
+
 def init():
+  # TODAY = str(date.today())
+  TODAY = '2022-05-03' # test case
   keys = list(result.keys())
   
-  for product in get_products():
+  for product in get_products(TODAY):
     for key in keys:
       update_amount(key, product)
+  
+  create_inventory_df(keys, TODAY)
 
 init()
-
-# code check
-keys = list(result.keys())
-
-for key in keys:
-  print(f'{result[key]}')
-
